@@ -1,0 +1,139 @@
+body {
+  background-color: #85A8B5;
+  font-family: sans-serif; }
+
+main {
+  position: relative; }
+
+img {
+  display: block; }
+
+h1 {
+  position: absolute;
+  bottom: -90px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 25px; }
+
+h2 {
+  font-weight: bold;
+  font-size: 20px; }
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold; }
+
+
+@keyframes content_animation {
+  10% {
+    margin-top: 50px; }
+  100% {
+    margin-top: 30%; } }
+.trigger {
+  position: absolute;
+  top: 20px; }
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  transition: width 1s; }
+  @media (min-width: 767px) {
+    .intro.is-reached {
+      width: 50%; } }
+  .intro p {
+    position: absolute;
+    bottom: -130px;
+    animation: opacity_p 3s ease-in;
+    font-family: sans-serif;
+    letter-spacing: .5px; }
+
+@keyframes opacity_p {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.riesenrad-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  position: absolute; }
+  @media (min-width: 767px) {
+    .riesenrad-box {
+      position: fixed; } }
+  .riesenrad-box .rad {
+    width: 90%;
+    position: absolute;
+    top: 0;
+    animation: rad 10s infinite linear; }
+@keyframes rad {
+  to {
+    transform: rotate(360deg); } }
+  .riesenrad-box .beine {
+    width: 80%;
+    position: absolute;
+    bottom: 0px; }
+  .riesenrad-box .gondel {
+    width: 18%;
+    position: absolute;
+    z-index: 3;
+    left: 40%;
+    top: 75px; }
+    .riesenrad-box .gondel_1 {
+      animation: rotate_gondel 10s infinite linear; }
+@keyframes rotate_gondel {
+  from {
+    transform: rotate(0deg) translate(-125px) rotate(0deg); }
+  to {
+    transform: rotate(360deg) translate(-125px) rotate(-360deg); } }
+    .riesenrad-box .gondel_2 {
+      animation: rotate_gondel 10s -2s infinite linear; }
+    .riesenrad-box .gondel_3 {
+      animation: rotate_gondel 10s -4s infinite linear; }
+    .riesenrad-box .gondel_4 {
+      animation: rotate_gondel 10s -6s infinite linear; }
+    .riesenrad-box .gondel_5 {
+      animation: rotate_gondel 10s -8s infinite linear; }
+
+.cloud {
+  display: none; }
+@keyframes cloud {
+  to {
+    transform: translateX(550%); } }
+  @media (min-width: 767px) {
+    .cloud {
+      position: fixed;
+      display: block; }
+      .cloud_1 {
+        left: 20%;
+        top: 20%;
+        width: 8%;
+        min-width: 100px;
+        animation: cloud 15s ease-out forwards; }
+      .cloud_2 {
+        left: 12%;
+        top: 35%;
+        width: 8%;
+        min-width: 50px;
+        animation: cloud 14.5s ease-out .5s forwards; } }
+
+.box_1 {
+  display: flex;
+  flex-direction: row-reverse; }
+  .box_1 .text {
+    margin: 020px; }
+
+@media (min-width: 767px) {
+  .box_1 .text {
+    width: 30%;
+    margin-right: 8%;
+    margin-bottom: 100px; } }
+
+/*# sourceMappingURL=style.css.map */
